@@ -1,0 +1,39 @@
+{
+  "name": "@vladislav805/sights-photos",
+  "version": "0.1.0",
+  "description": "API for photos",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "start": "DEBUG=1 PORT=3333 ts-node src/index.ts",
+    "build": "tsc --project tsconfig.json"
+  },
+  "keywords": [],
+  "author": "Vladislav Veluga <vlad@velu.ga> (https://velu.ga/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "1.19.0",
+    "@types/cookie-parser": "1.4.2",
+    "@types/lodash": "4.14.165",
+    "@types/md5": "2.2.1",
+    "@types/multer": "1.4.5",
+    "@types/node": "14.14.14",
+    "@types/node-fetch": "2.5.7",
+    "ts-node": "9.1.1",
+    "typescript": "4.1.3"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "connect-query": "1.0.0",
+    "cookie-parser": "1.4.5",
+    "dotenv": "8.2.0",
+    "exifr": "6.0.0",
+    "lodash": "4.17.20",
+    "md5": "2.3.0",
+    "multer": "1.4.2",
+    "node-fetch": "2.6.1",
+    "node-gd": "2.1.1",
+    "restana": "4.8.1"
+  }
+}

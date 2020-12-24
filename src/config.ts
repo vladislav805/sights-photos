@@ -26,7 +26,7 @@ const directory = {
     /**
      * Постоянное хранилище, находится вне проекта
      */
-    permanent: path.resolve('..', 'storage'),
+    permanent: path.resolve('..', 'storage', 'data'),
 };
 
 dotenv.config({

@@ -20,7 +20,7 @@ export default function removeFile(params: Record<string, string>) {
 
     const [localPath, name] = p.split('\n', 2);
 
-    const fullPath = path.resolve(config.directory.loaded, localPath, name);
+    const fullPath = path.resolve(config.directory.permanent, localPath, name);
 
     if (fs.existsSync(fullPath)) {
         fs.unlink(fullPath, () => {});

@@ -23,7 +23,7 @@ service.post('/upload', upload.single('file') as any, handleUpload);
 /**
  * Сохранение фотографии
  * От бекенда прилетает запрос с параметрами:
- * string s - JSON строка с данными для соханения
+ * string s - JSON строка с данными для сохранения
  * string g - подпись, md5(секрет + json)
  */
 service.get('/save', (req, res) => {
@@ -37,7 +37,7 @@ service.get('/save', (req, res) => {
         return;
     }
 
-    const sizes = JSON.parse(json).sizes;
+    const sizes = JSON.parse(json);
 
     handleSave(sizes);
 

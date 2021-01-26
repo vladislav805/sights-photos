@@ -68,11 +68,13 @@ export default async function handleUpload(req: IncomingMessage & RequestExtensi
         await exr.read(file.path);
         const exif = await exr.parse();
 
-        image = await fixOrientation(image, exif);
+        if (exif) {
+            image = await fixOrientation(image, exif);
 
-        if ('latitude' in exif && 'longitude' in exif) {
-            result.latitude = exif.latitude;
-            result.longitude = exif.longitude;
+            if ('latitude' in exif && 'longitude' in exif) {
+                result.latitude = exif.latitude;
+                result.longitude = exif.longitude;
+            }
         }
 
         for (const { size, name, quality, key, max, needWatermark } of config.variants) {
